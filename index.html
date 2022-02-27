@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | Lancaster University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="banner item item-1" role="banner">
+            <div class = "banner-img-container">
+                <img src="banner.png" style="width:1000px" alt="Lancaster University">
+            </div>
+        </div>
+
+        <div class="logo item item-2">
+            <img src="icon.png" style="width:150px;" alt="">
+        </div>
+
+        <div class="menu-bar item item-3" role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <div id="links">
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </div>
+                <a href = "javascript:void(0);" class="icon" onclick="burger()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </ul>
+        </div>
+
+        <div class="campus item item-4">
+            <h2>University Campus</h2>
+            <div class = "img-container">
+                <img src="aerial.png" style="width:500px;" alt="">
+            </div>
+            <br>
+            Located on a beautiful campus in the North West of England, the University places great emphasis on a strong student experience and employability and gives students access to academics who are experts in their field.
+            <a class="accordion" href="#">More about our campus</a>
+            <div class="panel">
+                <br>Lancaster is one of only a handful of universities with a collegiate system which has helped to forge a strong sense of identity and loyalty, and continues to be a distinctive feature of student life at Lancaster. Students from one hundred countries make up a thriving community based around our nine colleges, creating a culturally diverse campus in a location that boasts the combination of city, coast and countryside.
+            </div>
+        </div>
+
+        <div class="facts item item-5">
+            <h2>Facts and Figures</h2>
+            Students at Lancaster University are among the most satisfied in the UK according to the 2015 National Student Survey, in which the University achieved 91% on the overall satisfaction score, placing it firmly amongst the top 10 UK universities.
+            <a class="accordion" href="#">More facts and figures</a>
+            <div class="panel">
+                <p>Summer 2011 saw the opening of our brand new £20m Sports Centre, ranked sixth in the Student Experience Survey 2015.</p>
+                <p>97% of Lancaster University graduates have gone into work or further study within six months of graduating.</p>
+                As one of the few collegiate universities in the UK we welcome each student to one of our colleges on campus. In addition to our eight undergraduate colleges, we have one dedicated to our postgraduate students.
+            </div>
+        </div>
+            
+        <div class="news item item-6">
+            <h2>News</h2>
+            <h3>Lancaster Academics to unlock patient information to create a healthier North West</h3>
+            <a class="accordion" href="#">Read about our patient care initiative</a>
+            <div class="panel">
+                Academics from across Lancaster University are coming together on a ground-breaking £20m initiative using data and technology in revolutionary ways to improve patient care and ultimately save lives in the North of England.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        }
+        else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+function burger() { 
+    var x = document.getElementById("links");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }
+    else {
+        x.style.display = "block";
+    }
+}
+</script>
+
+</html>

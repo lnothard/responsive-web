@@ -1,0 +1,192 @@
+img {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.banner-img-container {
+    padding: 10px;
+}
+
+.banner img {
+    max-width: 100%;
+}
+
+.logo img {
+    max-width: 30%;
+}
+
+.campus img {
+    max-width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #333;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;  
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-bar a:hover {
+    background-color: #111;
+}
+
+#links {
+    display: none;
+}
+
+.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    padding: 5px;
+}
+
+.item {
+    border: 3px solid grey;
+}
+
+.item-1 {
+    grid-area: banner;
+    display: none;
+    justify-self: start;
+}
+
+.item-2 {
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+    border: none;
+}
+
+.item-3 {
+    grid-area: menu-bar;
+    align-self: center;
+    border: none;
+}
+
+.item-4 {
+    grid-area: campus;
+}
+
+.item-5 {
+    grid-area: facts;
+}
+
+.item-6 {
+    grid-area: news;
+}
+
+.container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 5px 20px 0 20px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "logo"
+        "menu-bar"
+        "campus"
+        "facts"
+        "news";
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+}
+
+/* Media query for tablet: */
+@media (min-width: 768px) {
+    .logo img {
+        max-width: 66.7%;
+    }
+
+    #links {
+        display: block;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    li {
+        float: left;
+        width: 20%;
+    }
+
+    .container {
+        grid-template-columns: 15% 85%;
+        grid-template-areas:
+            "logo menu-bar"
+            "campus campus"
+            "facts facts"
+            "news news";
+    }
+}
+
+/* Media query for laptop: */
+@media (min-width: 1024px) {
+    .item-1 {
+        display: block;
+        margin-left: -7px;
+    }
+
+    .logo img {
+        max-width: 100%;
+    }
+
+    .container {
+        grid-template-columns: 45% 40% 15%;
+        grid-template-areas:
+            "banner banner logo"
+            "menu-bar menu-bar menu-bar"
+            "campus facts facts"
+            "news news news";
+    }
+}
+
+/* Media query for desktop: */
+@media (min-width: 1440px) {
+    .item-1 {
+        margin-left: 7px;
+    }
+
+    .container {
+        grid-template-columns: 40% 40% 8% 12%;
+        grid-template-areas:
+            "banner banner . logo"
+            "menu-bar menu-bar menu-bar news"
+            "campus facts facts news"
+    }
+}
